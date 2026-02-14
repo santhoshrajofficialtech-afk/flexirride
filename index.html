@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FlexiRide 3D Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="background"></div>
+
+<header>
+    <img src="https://cdn-icons-png.flaticon.com/512/2972/2972185.png" class="logo">
+    <h1>FlexiRide</h1>
+    <p>Smart Urban Mobility Platform</p>
+</header>
+
+<!-- LOGIN -->
+<div class="card" id="loginSection">
+    <h2>Login</h2>
+    <input type="text" id="loginEmail" placeholder="Email">
+    <input type="password" id="loginPassword" placeholder="Password">
+    <button onclick="login()">Login</button>
+    <p onclick="showRegister()">Create Account</p>
+</div>
+
+<!-- REGISTER -->
+<div class="card hidden" id="registerSection">
+    <h2>Register</h2>
+    <input type="text" id="regName" placeholder="Full Name">
+    <input type="text" id="regEmail" placeholder="Email">
+    <input type="password" id="regPassword" placeholder="Password">
+    <button onclick="register()">Register</button>
+    <p onclick="showLogin()">Back to Login</p>
+</div>
+
+<!-- BOOKING -->
+<div class="card hidden" id="bookingSection">
+    <h2>Book Your Ride</h2>
+
+    <img src="https://cdn-icons-png.flaticon.com/512/744/744465.png" class="bike">
+
+    <select id="location">
+        <option>Central Hub</option>
+        <option>Mini Branch 1</option>
+        <option>Mini Branch 2</option>
+    </select>
+
+    <select id="plan">
+        <option>Daily - ₹199</option>
+        <option>Weekly - ₹999</option>
+        <option>Monthly - ₹2999</option>
+    </select>
+
+    <button onclick="bookRide()">Book Now</button>
+    <button class="logout" onclick="logout()">Logout</button>
+
+    <p id="bookingMessage"></p>
+</div>
+
+<script src="demo.js"></script>
+</body>
+</html>
